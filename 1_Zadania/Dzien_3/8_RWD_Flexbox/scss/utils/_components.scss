@@ -1,0 +1,22 @@
+.btn{
+    padding: 15px;
+    font-size: 2rem;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 1024px){
+        flex-direction: row;
+    }
+    > i{
+        margin: 0 10px;
+    }
+}
+.pl-30{
+    padding-left: 30px;
+}
+.pr-30{
+    padding-right: 30px;
+}

@@ -1,0 +1,26 @@
+$font-sizes: (
+ fs1: 100px,
+ fs2: 50px,
+ fs3: 6px
+ );
+
+@debug (map-values($font-sizes));
+
+@for $i from 1 through 3 {
+  h#{$i} {
+    font-size: nth(map-values($font-sizes), $i);
+  }
+}
+
+// $font-sizes: (
+//  h1: 100px,
+//  h2: 50px,
+//  h3: 6px
+//  );
+//
+//  @each $tag, $font-size in $font-sizes {
+//    #{$tag} {
+//      font-size: $font-size;
+//    }
+//  }
+ // powyzej kod jesli w mapie klucze od razu bylyby selektorami

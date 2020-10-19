@@ -1,0 +1,14 @@
+// na ekrantach mniejszych niż 450px, ustaw elementy pod sobą i ukryj ostatni-mobile first.
+.blocks {
+    display: flex;
+    flex-flow: column nowrap;
+    .block {
+        width: 25%;
+        height: 100vh;
+        border: 1px solid red;
+        background: $sml-scr-col;
+    }
+    & .block:last-child {
+        display: none;
+    }
+}

@@ -1,0 +1,48 @@
+$lineHeight: 28px;
+$fontSize: 16px;
+
+* {
+    font-size: $fontSize;
+    line-height: $lineHeight;
+}
+@mixin random-bgr(){
+  color: rgb(random(255), random(255), random(255));
+}
+
+@for $i from 1 through 4{
+    h#{$i}{
+      font-size: $fontSize * (4 - $i + 1);
+      @include random-bgr();
+    }
+}
+// 4 -i--bo chce czcionke od najwiekszej, +1, raz zeby czytelnie a przede wszystkim zeby uniknac 4-4=0(mnoze przez to)
+
+// zastosuj random dla h!
+
+@mixin drawItem($shape, $background){
+  @if $shape == "circle" {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: $background;
+  } @else if $shape == "rectangular" {
+      width: 200px;
+      height: 200px;
+      background: $background;
+  }
+}
+.draw-container {
+  @include drawItem("rectangular", pink);
+}
+
+
+
+@for $i from 1 through 10{
+    .block_#{$i}{
+      @if $i % 2 == 0 {
+        border: 5px solid orange;
+      } @else {
+        border: 5px solid blue;
+      }
+    }
+}

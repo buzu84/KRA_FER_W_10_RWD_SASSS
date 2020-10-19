@@ -1,0 +1,16 @@
+// domyslniemenu ma byc niewidoczne, od tego zaczynam, bo mobile first
+// obsluga przycisku(w js)-tj const list(wojek-hamburger)
+.menu{
+    display: none;
+    @media screen and (min-width: 1024px){
+        display: block;
+    }
+}
+@media screen and (min-width: 1024px){
+    #menu-trigger{
+        display: none;
+    }
+}
+.visible{
+    display: block;
+}

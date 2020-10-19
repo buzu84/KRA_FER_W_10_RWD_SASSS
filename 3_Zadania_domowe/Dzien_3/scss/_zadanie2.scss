@@ -1,0 +1,15 @@
+.flex-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $alt-back-2;
+  height: 40vh;
+  overflow: auto;
+  img {
+    flex-shrink: 0;
+    padding: 0 1rem;
+    min-height: 0;
+  }
+}

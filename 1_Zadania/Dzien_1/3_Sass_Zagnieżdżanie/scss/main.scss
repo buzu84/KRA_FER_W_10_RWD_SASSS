@@ -1,0 +1,55 @@
+@import "./utils/vars";
+.main-width{
+  ul li{
+      &:first-child{
+          color: red;
+      }
+    }
+  }
+
+.menu > {
+  li{
+      display:inline;
+      padding-left: 10px;
+  }
+}
+
+.menu{
+  background: $mainColor;
+}
+
+ header {
+   border: solid 2px $alt-color;
+ }
+
+ .main-width{
+   width: $page-width;
+ }
+
+ .text-list{
+     ul li{
+       &:first-child{
+         color: orange;
+       }
+       &:last-child{
+         color: green;
+       }
+       &:hover{
+         color: red;
+       }
+     }
+   }
+
+ .footer-list{
+   // height: 20px;
+   overflow: hidden;
+   li{
+     float: left;
+     &:hover{
+       background: yellow;
+     }
+     &:last-child{
+       float: right;
+     }
+   }
+ }

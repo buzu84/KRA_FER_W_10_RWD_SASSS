@@ -1,0 +1,15 @@
+.navigation{
+    padding: 20px 30px;
+    &__menu{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .hamburger{
+        display: none;
+    }
+    nav{
+        display: block;
+    }
+}

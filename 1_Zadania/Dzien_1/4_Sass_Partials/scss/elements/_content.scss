@@ -1,0 +1,13 @@
+.site__container {
+  max-width: 800px;
+  background: $contentBackground;
+  margin: 40px auto;
+}
+.content {
+  padding: 20px;
+}
+
+.content__description {
+  font-size: $contentFont;
+  line-height: 1.4;
+}

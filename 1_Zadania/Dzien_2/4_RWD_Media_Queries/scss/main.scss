@@ -1,0 +1,57 @@
+body {
+    background: yellow;
+    // @media screen and (min-width: 820px) {
+    //     background: blue;
+    // }
+    // zakomentowana czesc zad z wykladowca, zakomentowane zeby moje kolory dzialaly
+    @media screen and (max-width: 800px) {
+      background: violet;
+    }
+
+    @media screen and (max-width: 400px) {
+      background: green;
+    }
+
+    @media screen and (min-width: 800px) {
+      background: orange;
+    }
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+    &::placeholder {
+        @content;
+    }
+}
+
+input{
+    @include placeholder {
+        color: red;
+    };
+}
+textarea{
+    @include placeholder {
+        color: blue;
+    };
+}
+.box{
+  height: 300px;
+  width: 300px;
+  float: left;
+  margin-left: 10px;
+  @media screen and (max-width: 900px) {
+    float: none;
+    width: 100%;
+  }
+}
+.box1{
+  background: red;
+}
+.box2{
+  background: blue;
+}

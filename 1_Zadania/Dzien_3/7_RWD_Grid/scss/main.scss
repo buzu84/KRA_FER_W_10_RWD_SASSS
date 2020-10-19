@@ -1,0 +1,29 @@
+/*
+    col-x
+    col-sm-x
+    col-md-x
+    col-lg-x
+*/
+@import './utils/reset';
+@import './utils/grid';
+
+.redBox{
+  background: yellow;
+}
+.lightBlueBox{
+  background: lightblue;
+}
+.violetBox{
+  background: violet;
+}
+.yellowBox{
+  background: yellow;
+  height: 8rem;
+}
+.blueBox{
+  background: blue;
+  margin-bottom: 10px;
+}
+.row{
+  margin-bottom: 10px;
+}

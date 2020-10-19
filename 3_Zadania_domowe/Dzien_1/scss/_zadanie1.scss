@@ -1,0 +1,23 @@
+.list {
+  font-size: 2rem;
+}
+@mixin setTooltip($color, $text){
+    &:before{
+      content: $text;
+      color: $color;
+      display: none;
+      position: absolute;
+      text-align: center;
+      padding: 0.5rem 1rem;
+      background: $back-color;
+      font-size: 1.5rem;
+      border-radius: 0.3rem;
+    }
+    &:hover:before {
+      display: block;
+    }
+}
+
+.list {
+  @include setTooltip(green,"tekst tooltipa");
+}

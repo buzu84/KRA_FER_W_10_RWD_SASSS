@@ -1,0 +1,65 @@
+@mixin boxBorder($color) {
+    border: 3px solid $color;
+}
+
+%clearfix {
+    &:after,
+    &:before {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+.left_box,
+.right_box {
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+
+.left_box {
+    @include boxBorder(green);
+}
+
+.right_box {
+    @include boxBorder(red);
+}
+.test-mixin{
+    @extend %clearfix;
+}
+
+
+
+// #admin .nav a {
+//   color: #333;
+// }
+// a{
+//   color: #666;
+// }
+// #demo .body .link {
+//   @extend a;
+// }
+// do dokonczenia!!!
+
+
+%message {
+  border: 1px solid gray;
+  margin: 10px;
+  color: black;
+  border-radius: 5px;
+  width: 500px;
+  height: 100px;
+}
+.success {
+  @extend %message;
+  background: yellow;
+}
+.error {
+  @extend %message;
+  background: pink;
+}
+.info {
+  @extend %message;
+  background: blue;
+}

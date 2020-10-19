@@ -1,0 +1,19 @@
+.test_units{
+  font-size: 3rem;
+  border: 2px solid black;
+  width: 25em;
+  height: 5em;
+  // wys 150px bo 1em to 3*10=30, a 30*5=150
+  header{
+    font-size: 50%;
+    span{
+      font-size: 1.5rem;
+    }
+  }
+  // p{
+  //   span{
+  //     font-size: 3rem;
+  //   }
+  // }
+  // niepotrzebne bo odziedziczy po rodzicu!!
+}

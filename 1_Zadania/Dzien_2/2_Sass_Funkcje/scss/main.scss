@@ -1,0 +1,56 @@
+$lightenRed: lighten(red, 40%);
+
+p {
+  color: $lightenRed;
+}
+
+@for $i from 1 through 4{
+    h#{$i}{
+      color: lighten(black, $i * 15%);
+    }
+}
+
+// @function randomNum($min, $max) {
+//   $rand: random();
+//   $randomNum: $min + floor($rand * (($max - $min) + 1));
+//
+//   @return $randomNum;
+// }
+$randomNo: random();
+$randomPercentNo: $randomNo * 100%;
+@debug $randomPercentNo;
+
+p {
+  font-size: $randomPercentNo;
+}
+
+
+// $color1: yellow;
+// $color2: red;
+// $mixedColor: mix($color1, $color2, $weight: 50%);
+// wersja prostsza, nizej-cwiczylam;)
+@mixin mixColors($color1,$color2){
+  background: mix($color1, $color2, $weight: 50%);
+}
+
+
+@function mixColors($color1, $color2){
+  $mixedColor: mix($color1, $color2, $weight: 50%);
+  @return $mixedColor;
+}
+@debug mixColors(yellow,green);
+
+
+.mix {
+  width: 100px;
+  height: 100px;
+  background: mixColors(yellow,red);
+  // background: $mixedColor;
+
+}
+
+@function addNumbers($number1,$number2) {
+  $sum: $number1+$number2;
+  @return $sum;
+}
+@debug addNumbers(26,3);

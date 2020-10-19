@@ -1,0 +1,71 @@
+$gutter: 0px;
+$columns: 12;
+// $row-gap: 10px;
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  // display: grid;
+  // grid-row-gap: $row-gap;
+  // grid-column-gap: $col-gap;
+}
+
+.row {
+  width: 100%;
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 0 $gutter;
+  min-height: 1px;
+}
+
+
+@for $i from 1 through $columns {
+  .container .row .col-#{$i} {
+    width: 100 / $columns * $i * 1%;
+  }
+}
+.hidden{
+  display: none;
+}
+
+@media screen and (min-width: 768px){
+  @for $i from 1 through $columns {
+    .container .row .col-sm-#{$i} {
+      width: 100 / $columns * $i * 1%;
+    }
+  }
+  .hidden-sm{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  @for $i from 1 through $columns {
+    .container .row .col-md-#{$i} {
+      width: 100 / $columns * $i * 1%;
+    }
+  }
+  .hidden-md{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1280px){
+  @for $i from 1 through $columns {
+    .container .row .col-lg-#{$i} {
+      width: 100 / $columns * $i * 1%;
+    }
+  }
+  .hidden-lg{
+    display: none;
+  }
+}

@@ -1,0 +1,22 @@
+.hello{
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    &__text{
+        margin-bottom: 30px;
+        text-align: center;
+        h1{
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+    }
+    &__buttons{
+        display: flex;
+        flex-direction: column;
+    }
+}

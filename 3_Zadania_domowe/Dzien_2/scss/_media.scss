@@ -1,0 +1,30 @@
+@media only screen and #{$small-scr} {
+  .blocks {
+    display: flex;
+    flex-flow: row nowrap;
+    & .block:last-child {
+      display: block;
+      background: $sml-scr-col;
+    }
+    & .block:first-child {
+      display: none;
+    }
+  }
+}
+@media only screen and #{$medium-scr} {
+  .blocks {
+    display: flex;
+    flex-flow: row nowrap;
+    & .block {
+      display: none;
+    }
+    & .block:last-child {
+      display: block;
+      background: $md-scr-col;
+    }
+    & .block:first-child {
+      display: block;
+      background: $md-scr-col;
+    }
+  }
+}

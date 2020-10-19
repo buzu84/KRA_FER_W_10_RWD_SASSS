@@ -1,0 +1,86 @@
+html, body{
+    font-size: 8px;
+}
+.test{
+    font-size: 20px;
+    p {
+        font-size: 2em;
+    }
+}
+.panel{
+    h2{
+        font-size: 3rem;
+    }
+}
+// .bg_box{
+//     // font-size: 20px;
+//     .box{
+//         font-size: 200%;
+//     }
+// }
+.panel{
+  p{
+    font-size: 4em;
+  }
+}
+.bg_box{
+  font-size: 10px;
+  .box{
+    font-size: 2em;
+    width: 3em;
+  }
+}
+
+.container{
+  p{
+    font-size: 3rem;
+  }
+  .wolf_text{
+    border: 0.5rem solid red;
+    width: 30rem;
+  }
+}
+.winnie_the_pooh{
+  font-size: 10px;
+  blockquote{
+    font-size: 300%;
+  }
+}
+
+.images{
+  width: 80%;
+  // po zakomentowaniu zmienia sie szerokosc img_one ,procent brany z rodzica!
+  border: 0.5rem solid black;
+  height: 300px;
+  .img_one{
+    height: 100%;
+    width: 30%;
+    background-image: url('../images/cat.jpg');
+    // background-position: center;
+    background-size: cover;
+  }
+}
+
+.test_height_grandpa{
+  border: 0.5rem solid red;
+  height: 50px;
+  .test_height_daddy{
+    height: 200%;
+    // gdy zakomentuje wysokosc, zienia sie tez wysokosc dla dziecka(%)
+    border: 0.5rem solid green;
+    .test_height_baby{
+      height: 50%;
+      border: 0.5rem solid red;
+    }
+  }
+}
+.centered_text{
+  position: relative;
+  text-align: 50vw;
+
+  h1{
+    position: absolute;
+    width: 50vw;
+    height: 50vh;
+  }
+}

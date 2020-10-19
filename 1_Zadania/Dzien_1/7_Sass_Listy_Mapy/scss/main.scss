@@ -1,0 +1,39 @@
+$colors: #ff0000, #00FF00, #0000FF;
+$widths: ( small: 100px, medium: 200px, large: 300px );
+
+body{
+    background: nth($colors, 1);
+    width: map-get($widths, large);
+}
+header{
+    background: nth($colors, 2);
+    width: map-get($widths, medium);
+}
+.main-width{
+    background: nth($colors, 3);
+    width: map-get($widths, small);
+}
+
+$variousColors: (
+  header: #b06,
+  text: #334,
+  footer: #666777
+);
+header {
+  color: map-get($variousColors, header);
+}
+footer {
+  color: map-get($variousColors, footer);
+}
+section {
+  color: map-get($variousColors, text);
+}
+
+$map: ( min-width: 200px, max-width: 1000px );
+$mapValues: map-values($map);
+$widthsList: map-values($widths);
+@debug $widthsList;
+@debug $mapValues;
+.menu {
+  width: nth($mapValues, 1);
+}

@@ -1,0 +1,42 @@
+.container, .inner-flex {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  height: 45vh;
+}
+
+.row,.inner-col, .inner-row {
+  width: 100%;
+  height: 100%;
+}
+
+.first-row {
+  height: 15%;
+  background: $alt-color;
+}
+
+.second-row {
+  display: flex;
+  flex-direction: row;
+  height: 45%;
+}
+
+.third-row {
+  height: 25%;
+}
+.inner-row {
+  height: 15%;
+  margin-bottom: 0.5rem;
+}
+
+.inner-row, .third-row, .last-col{
+  background: $main-back;
+}
+
+.middle-col {
+  background: $alt-back;
+}

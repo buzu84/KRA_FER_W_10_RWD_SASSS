@@ -1,0 +1,53 @@
+body {
+    background: yellow;
+    font-size: 20px;
+    @media screen and (min-width: 420px) {
+        background: white;
+    }
+}
+// zaczynam tak bo tj mobile first
+.container{
+  .sidebar, section{
+    width: 30rem;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .sidebar{
+    background: blue;
+  }
+  section{
+    background: gray;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .container{
+    display: flex;
+    height: 20rem;
+    width: 100%;
+    .sidebar{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20%;
+      background: blue;
+    }
+    section{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      background: gray;
+    }
+  }
+}
+h1{
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  // tu jest potzrebne bo tekst nie miesci sie w 1 linii, h1 wycentrowane przez flexa ale tekst nie bez tego
+}

@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: white;
+}
+
+form {
+  margin: 20px auto;
+  text-align: center;
+}
+
+form input {
+  margin: 10px 0;
+}
+
+header {
+  margin: 20px 0;
+}
+
+.main-width {
+  width: 800px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.main-width a {
+  float: left;
+  display: block;
+  font-size: 150%;
+  line-height: 50px;
+  width: 50%;
+}
+
+.main-width ul {
+  float: left;
+  list-style: none;
+  width: 50%;
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.main-width  {
+  li {
+    float: left;
+    margin-right: 20px;
+    font-size: 100%;
+    line-height: 50px;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+
+.dialog {
+  width: 300px;
+  padding: 10px;
+  background: green;
+  border: 1px solid black;
+  margin: 40px auto;
+}
+
+.dialog__title {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.dialog__text {
+  font-size: 14px;
+}
+
+@mixin clearfix(){
+  &:after, &:before{
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin boxBorder($color){
+  border: 3px solid $color;
+}
+
+.left_box, .right_box{
+  width: 300px;
+  height: 300px;
+  float: left;
+}
+
+.left_box{
+  @include boxBorder(green);
+}
+.right_box{
+  @include boxBorder(red);
+}
+
+.test-mixin{
+  @include clearfix();
+}
+// clearfix na rodzicu
+
+@mixin fontProp($font){
+  font-size: $font;
+  border-radius: 5px;
+}
+header{
+  @include fontProp(20px);
+  @include boxBorder(red);
+}
+
+@mixin dialogBox($backgroundColor,$width){
+  width: $width;
+  padding: 10px;
+  background: $backgroundColor;
+  border: 1px solid black;
+  margin: 40px auto;
+  position: relative;
+  &:after {
+      content: '';
+      position: absolute;
+      left: $width/2;
+      top: -7%;
+      width: 10px;
+      height: 10px;
+      border: 1px solid black;
+      background: $backgroundColor;
+      display: inline-block;
+      transform: rotate(45deg);
+    }
+  }
+  .dialog {
+    @include dialogBox(green, 900px);
+  }

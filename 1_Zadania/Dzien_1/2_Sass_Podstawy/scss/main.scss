@@ -1,0 +1,18 @@
+@import "./utils/vars";
+
+.menu {
+  color:$fontColor;
+  background: $mainColor;
+  border: $border;
+}
+
+h2 {
+  color: $fontColor;
+}
+
+section {
+  padding-top: $aboveDistance;
+  padding-bottom: $belowDistance;
+}
+/*komentarz typ1*/
+//komentarz typ2
